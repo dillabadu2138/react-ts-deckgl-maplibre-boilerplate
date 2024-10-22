@@ -1,6 +1,7 @@
 import Map, {
   useControl,
   FullscreenControl,
+  GeolocateControl,
   NavigationControl,
   ScaleControl,
   AttributionControl,
@@ -53,6 +54,7 @@ const App = () => {
     >
       <DeckGLOverlay layers={layers} />
       <FullscreenControl position='top-right' />
+      <GeolocateControl position='top-right' trackUserLocation={false} />
       <NavigationControl
         position='top-right'
         showZoom={true}
