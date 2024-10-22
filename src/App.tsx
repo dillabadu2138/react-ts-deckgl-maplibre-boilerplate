@@ -3,6 +3,7 @@ import Map, {
   FullscreenControl,
   NavigationControl,
   ScaleControl,
+  AttributionControl,
 } from 'react-map-gl/maplibre';
 import { DeckProps } from '@deck.gl/core';
 import { GeoJsonLayer } from 'deck.gl';
@@ -48,6 +49,7 @@ const App = () => {
       initialViewState={INITIAL_VIEW_STATE}
       mapStyle={MAP_STYLE}
       style={{ width: '100vw', height: '100vh' }}
+      attributionControl={false}
     >
       <DeckGLOverlay layers={layers} />
       <FullscreenControl position='top-right' />
@@ -58,6 +60,7 @@ const App = () => {
         visualizePitch={true}
       />
       <ScaleControl position='bottom-left' />
+      <AttributionControl compact={true} />
     </Map>
   );
 };
