@@ -1,4 +1,4 @@
-import Map, { useControl } from 'react-map-gl/maplibre';
+import Map, { useControl, NavigationControl } from 'react-map-gl/maplibre';
 import { DeckProps } from '@deck.gl/core';
 import { GeoJsonLayer } from 'deck.gl';
 import { MapboxOverlay } from '@deck.gl/mapbox';
@@ -45,6 +45,12 @@ const App = () => {
       style={{ width: '100vw', height: '100vh' }}
     >
       <DeckGLOverlay layers={layers} />
+      <NavigationControl
+        position='top-right'
+        showZoom={true}
+        showCompass={true}
+        visualizePitch={true}
+      />
     </Map>
   );
 };
