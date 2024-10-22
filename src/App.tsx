@@ -1,4 +1,9 @@
-import Map, { useControl, FullscreenControl, NavigationControl } from 'react-map-gl/maplibre';
+import Map, {
+  useControl,
+  FullscreenControl,
+  NavigationControl,
+  ScaleControl,
+} from 'react-map-gl/maplibre';
 import { DeckProps } from '@deck.gl/core';
 import { GeoJsonLayer } from 'deck.gl';
 import { MapboxOverlay } from '@deck.gl/mapbox';
@@ -52,6 +57,7 @@ const App = () => {
         showCompass={true}
         visualizePitch={true}
       />
+      <ScaleControl position='bottom-left' />
     </Map>
   );
 };
